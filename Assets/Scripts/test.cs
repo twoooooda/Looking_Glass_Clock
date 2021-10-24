@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-
-public class MinuteHnadManager : MonoBehaviour
+public class test : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,7 +14,8 @@ public class MinuteHnadManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int m = DateTime.Now.Minute;
-        GetComponent<Transform>().localEulerAngles = new Vector3(0, 0, -360 / 60.0f * m);
+        DateTime dt = DateTime.Now;
+
+        Debug.Log(dt.ToString("yyyy/MM/dd HH:mm:ss"));
     }
 }
